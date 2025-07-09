@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Michelli! 🎉</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffdee9, #b5fffc);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff69b4;
+    }
+
+    img {
+      max-width: 300px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1.3em;
+      margin: 20px 0;
+    }
+
+    .piada {
+      font-style: italic;
+      color: #444;
+    }
+
+    .coracao {
+      font-size: 2em;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    audio {
+      margin-top: 30px;
+    }
+
+    #bloco {
+      margin-top: 40px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    li input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    li button {
+      margin-left: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Feliz Aniversário, Michelli! 🎂✨</h1>
+
+  <img src="foto.jpg" alt="Michelli, Victor e Benjamim">
+
+  <p>Hoje é o dia da mulher que conquistou meu coração com um sorriso e um talento especial pra me deixar bobo de amor. 💘</p>
+
+  <p class="piada">Você tá tão maravilhosa que o sol pediu um óculos escuro. ☀️🕶️</p>
+
+  <p>Obrigado por ser minha parceira de vida, minha fortaleza, e agora... a mãe mais incrível que esse mundão já viu. 👶💪</p>
+
+  <p>E olha, se eu tivesse dinheiro, te levava pra Paris. Mas como a realidade é o PIX zero, fiz esse site cheio de amor. 😅💻❤️</p>
+
+  <div class="coracao">💖💖💖</div>
+
+  <audio controls autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio 😢
+  </audio>
+
+  <!-- BLOCO DE NOTAS COM DESEJOS -->
+  <div id="bloco">
+    <h2>🎯 Meus Planos até o próximo aniversário:</h2>
+    <input type="text" id="novoItem" placeholder="Ex: Fazer uma viagem, comprar algo, aprender...">
+    <button onclick="adicionarItem()">Adicionar</button>
+    <ul id="listaDesejos"></ul>
+  </div>
+
+  <div id="galeria" style="margin-top: 40px;">
+    <h2>📸 Nossos Momentos Juntos:</h2>
+    <img src="foto1.jpeg" alt="Foto 1" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto2.jpeg" alt="Foto 2" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto3.jpeg" alt="Foto 3" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto4.jpeg" alt="Foto 4" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto5.jpeg" alt="Foto 5" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto6.jpeg" alt="Foto 6" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto7.jpeg" alt="Foto 7" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto8.jpeg" alt="Foto 8" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto9.jpeg" alt="Foto 9" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto10.jpeg" alt="Foto 10" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto11.jpeg" alt="Foto 11" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto12.jpeg" alt="Foto 12" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto13.jpeg" alt="Foto 13" style="width: 200px; margin: 10px; border-radius: 10px;">
+    <img src="foto14.jpeg" alt="Foto 14" style="width: 200px; margin: 10px; border-radius: 10px;">
+  </div>
+
+  <p style="margin-top: 50px;">Te amo muito!<br>— Victor</p>
+
+  <script>
+    const lista = document.getElementById("listaDesejos");
+    const input = document.getElementById("novoItem");
+
+    function adicionarItem() {
+      if (input.value.trim() === "") return;
+
+      const li = document.createElement("li");
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", salvarLista);
+
+      const texto = document.createTextNode(input.value);
+
+      const botaoRemover = document.createElement("button");
+      botaoRemover.textContent = "❌";
+      botaoRemover.addEventListener("click", () => {
+        li.remove();
+        salvarLista();
+      });
+
+      li.appendChild(checkbox);
+      li.appendChild(texto);
+      li.appendChild(botaoRemover);
+
+      lista.appendChild(li);
+
+      salvarLista();
+      input.value = "";
+    }
+
+    function salvarLista() {
+      localStorage.setItem("listaMichelli", lista.innerHTML);
+    }
+
+    function carregarLista() {
+      const salva = localStorage.getItem("listaMichelli");
+      if (salva) {
+        lista.innerHTML = salva;
+
+        document.querySelectorAll('#listaDesejos input[type="checkbox"]').forEach(cb => {
+          cb.addEventListener("change", salvarLista);
+        });
+
+        document.querySelectorAll('#listaDesejos button').forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            e.target.parentElement.remove();
+            salvarLista();
+          });
+        });
+      }
+    }
+
+    window.onload = carregarLista;
+  </script>
+
+</body>
+</html>
